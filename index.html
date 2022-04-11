@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Formulario</h1>
+    <!-- Lo que hace el novalidate es no tener en cuenta las validaciones que pusimos de html -->
+        <form id="formulario" novalidate>
+            <input 
+            class="form-control mb-2"
+            name="userName"
+            placeholder="Ingrese su nombre"
+            autocomplete="off"
+            id="userName"
+            type="text"
+            required
+            pattern="[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+            title="Solo letras"
+            minlength="3"
+            maxlength="20"
+            >
+
+            <input
+            class="form-control mb-2" 
+            name="userEmail"
+            placeholder="Ingrese el correo"
+            id="userEmail"
+            autocomplete="off"
+            type="text"
+            required
+            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+            title="Ingresa un email valido"
+            >
+            <button class="btn btn-primary" type="submit">Enviar</button>
+
+        </form>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
