@@ -27,6 +27,9 @@
             maxlength="20"
             >
 
+            <p class="text-danger mb-2 d-none" id="alertName"></p>
+            <!-- Lo que hace el d-none es camuflar el contenido que hay -->
+
             <input
             class="form-control mb-2" 
             name="userEmail"
@@ -38,9 +41,17 @@
             pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
             title="Ingresa un email valido"
             >
+            <p class="text-danger mb-2 d-none" id="alertEmail"></p>
+
             <button class="btn btn-primary" type="submit">Enviar</button>
 
         </form>
+
+        <div
+        class="alert alert-success mt-2 d-none"
+        id="alertSuccess">
+        </div>
+
     </div>
     
     <script src="app.js"></script>
